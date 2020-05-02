@@ -11,6 +11,13 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
 
 This is a card for Lovelace's Xiaomi Air Purifier that supports most devices.
+Currently only tested on Xiaomi devices, if other devices have problems, please welcome Issues
+
+I need to know the following information:
+Services needed `fan.set_speed`, Need to provide the speed value
+![01](https://user-images.githubusercontent.com/16739914/80853645-ea13b600-8c64-11ea-9eb6-3fb4a98f14b2.png)
+
+
 
 ## Preview
 ![](https://iobroker-1255708240.cos.ap-hongkong.myqcloud.com/original/2X/e/e6d8ba7a47ce87146f90f697d5fa31d426399e73.gif)
