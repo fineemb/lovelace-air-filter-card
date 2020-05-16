@@ -148,6 +148,8 @@ static getStubConfig() {
   setConfig(config) {
     this._config = deepClone(config);
     let entityid = this._config.entity;
+    this.modes = this._config.modes;
+    
     const icons = {
       auto: "mdi:brightness-auto",
       silent: "mdi:weather-night",
