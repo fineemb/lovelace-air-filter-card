@@ -4,7 +4,7 @@
  * @Description   : 
  * @Date          : 2019-10-12 02:38:30
  * @LastEditors   : fineemb
- * @LastEditTime  : 2020-05-21 01:03:55
+ * @LastEditTime  : 2020-05-21 01:06:31
  */
 
 console.info("%c  AIR FILTER CARD  \n%c Version 1.1.2 ",
@@ -106,7 +106,7 @@ static getStubConfig() {
     }
     else {
       quality = '严重污染'
-      airBox.className='level-6'
+      air.className='level-6'
     }
 
     this.root.querySelector("#pm25").onclick = () => {
