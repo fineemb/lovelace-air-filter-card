@@ -7,7 +7,7 @@
  * @LastEditTime  : 2020-05-21 00:52:34
  */
 
-console.info("%c  AIR FILTER CARD  \n%c Version 1.1.0 ",
+console.info("%c  AIR FILTER CARD  \n%c Version 1.1.1 ",
 "color: orange; font-weight: bold; background: black", 
 "color: white; font-weight: bold; background: dimgray");
 
