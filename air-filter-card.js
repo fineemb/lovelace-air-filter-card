@@ -4,10 +4,10 @@
  * @Description   : 
  * @Date          : 2019-10-12 02:38:30
  * @LastEditors   : fineemb
- * @LastEditTime  : 2020-05-21 00:52:34
+ * @LastEditTime  : 2020-05-21 01:03:55
  */
 
-console.info("%c  AIR FILTER CARD  \n%c Version 1.1.1 ",
+console.info("%c  AIR FILTER CARD  \n%c Version 1.1.2 ",
 "color: orange; font-weight: bold; background: black", 
 "color: white; font-weight: bold; background: dimgray");
 
