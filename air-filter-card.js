@@ -4,10 +4,10 @@
  * @Description   : 
  * @Date          : 2019-10-12 02:38:30
  * @LastEditors   : fineemb
- * @LastEditTime  : 2020-05-21 01:06:31
+ * @LastEditTime  : 2020-07-20 19:18:43
  */
 
-console.info("%c  AIR FILTER CARD  \n%c Version 1.1.2 ",
+console.info("%c  AIR FILTER CARD  \n%c Version 1.1.3 ",
 "color: orange; font-weight: bold; background: black", 
 "color: white; font-weight: bold; background: dimgray");
 
@@ -106,7 +106,7 @@ static getStubConfig() {
     }
     else {
       quality = '严重污染'
-      air.className='level-6'
+      airBox.className='level-6'
     }
 
     this.root.querySelector("#pm25").onclick = () => {
@@ -136,7 +136,7 @@ static getStubConfig() {
 
     let mode = hass.states[entityId].attributes.mode;
     for(var i=0;i<3;i++){
-      if(this.modes[i].toLowerCase()===mode.toLowerCase()){
+      if((this.modes[i]+"").toLowerCase()===(mode+"").toLowerCase()){
         this.root.querySelector('#buttons :nth-child('+(i+1)+')').className = "active"
       }else{
         this.root.querySelector('#buttons :nth-child('+(i+1)+')').className = ""
