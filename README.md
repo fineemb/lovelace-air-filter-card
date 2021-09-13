@@ -4,7 +4,7 @@
  * @Description   : 
  * @Date          : 2019-10-14 20:48:50
  * @LastEditors   : fineemb
- * @LastEditTime  : 2020-07-20 19:23:24
+ * @LastEditTime  : 2021-09-13 19:03:37
  -->
 # Lovelace Xiaomi Air Filter Card
 
@@ -14,13 +14,13 @@ This is a card for Lovelace's Xiaomi Air Purifier that supports most devices.
 Currently only tested on Xiaomi devices, if other devices have problems, please welcome Issues
 
 I need to know the following information:
-Services needed `fan.set_speed`, Need to provide the speed value
+Services needed `fan.set_preset_mode`, Need to provide the mode value
 ![01](https://user-images.githubusercontent.com/16739914/80853645-ea13b600-8c64-11ea-9eb6-3fb4a98f14b2.png)
 
 
 ## Update
-v1.1.3
-+ fix #8
+v1.1.4
+fixed issue #13 after update
 
 ## Preview
 ![](https://iobroker-1255708240.cos.ap-hongkong.myqcloud.com/original/2X/e/e6d8ba7a47ce87146f90f697d5fa31d426399e73.gif)
