@@ -4,10 +4,10 @@
  * @Description   : 
  * @Date          : 2019-10-12 02:38:30
  * @LastEditors   : fineemb
- * @LastEditTime  : 2020-07-20 19:28:37
+ * @LastEditTime  : 2021-09-13 19:03:37
  */
 
-console.info("%c  AIR FILTER CARD  \n%c Version 1.1.3 ",
+console.info("%c  AIR FILTER CARD  \n%c Version 1.1.4 ",
 "color: orange; font-weight: bold; background: black", 
 "color: white; font-weight: bold; background: dimgray");
 
@@ -76,7 +76,12 @@ static getStubConfig() {
         entityId = entId;
       });
     }
-    let aqi = hass.states[entityId].attributes.aqi;
+    // Luc3as was here, added custom sensor for AQI, it is no longer in attribute list of fan
+    let device_prefix = entityId.split(".");
+    if (device_prefix[1] != "") {
+      device_prefix = device_prefix[1];
+    }
+    let aqi = hass.states["sensor." + device_prefix + "_pm2_5"].state;
     this.root.querySelector("#pm25").innerHTML = aqi<10?"0"+aqi:aqi;
     this.root.querySelector("#bg").className = hass.states[entityId].state?hass.states[entityId].state:"N/C";
     this.root.querySelector("#title").innerHTML = this._config.title||hass.states[entityId].attributes.friendly_name||"Air purifier";
@@ -114,23 +119,23 @@ static getStubConfig() {
         entity_id: entityId
       });
     }
-
+    // Luc3as was here, changed service call name for updated version of MIIO fan
     this.root.querySelector('#buttons :nth-child(1)').onclick = () => {
-      hass.callService('fan', 'set_speed', {
+      hass.callService('fan', 'set_preset_mode', {
         entity_id: entityId,
-        speed: this.modes[0]
+        preset_mode: this.modes[0]
       });
     }
     this.root.querySelector('#buttons :nth-child(2)').onclick = () => {
-      hass.callService('fan', 'set_speed', {
+      hass.callService('fan', 'set_preset_mode', {
         entity_id: entityId,
-        speed: this.modes[1]
+        preset_mode: this.modes[1]
       });
     }
     this.root.querySelector('#buttons :nth-child(3)').onclick = () => {
-      hass.callService('fan', 'set_speed', {
+      hass.callService('fan', 'set_preset_mode', {
         entity_id: entityId,
-        speed: this.modes[2]
+        preset_mode: this.modes[2]
       });
     }
 
