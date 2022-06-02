@@ -8,7 +8,7 @@
  -->
 # Lovelace Xiaomi Air Filter Card
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/hacs/integration)
 
 This is a card for Lovelace's Xiaomi Air Purifier that supports most devices.
 Currently only tested on Xiaomi devices, if other devices have problems, please welcome Issues
